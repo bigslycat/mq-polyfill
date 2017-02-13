@@ -1,0 +1,15 @@
+[ignore]
+<PROJECT_ROOT>/node_modules/.*
+<PROJECT_ROOT>/lib/.*
+
+[include]
+
+[libs]
+flow-typed/npm
+
+[options]
+module.use_strict=true
+esproposal.class_static_fields=enable
+esproposal.class_instance_fields=enable
+esproposal.export_star_as=enable
+unsafe.enable_getters_and_setters=true

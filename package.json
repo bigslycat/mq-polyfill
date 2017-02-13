@@ -1,0 +1,66 @@
+{
+  "name": "mq-polyfill",
+  "version": "0.0.0",
+  "description": "CSSOM-valid and jsdom-compatible matchMedia polyfill for server-side unit tests",
+  "engines": {
+    "node": ">=7.*"
+  },
+  "main": "lib/matchMediaPolyfill.js",
+  "files": [
+    "lib",
+    "README.md",
+    "LICENSE.md"
+  ],
+  "scripts": {
+    "lint": "eslint src",
+    "types": "flow",
+    "prebuild": "npm run lint && npm run types",
+    "build": "npm run build-unsafe",
+    "build-unsafe": "rm -rf lib && babel src --out-dir lib --source-maps",
+    "postbuild": "cp src/matchMediaPolyfill.js.flow lib",
+    "precommit": "npm run prebuild",
+    "preversion": "git checkout master && npm run build",
+    "postversion": "npm publish"
+  },
+  "devDependencies": {
+    "babel-cli": "6.22.2",
+    "babel-eslint": "^7.1.1",
+    "babel-plugin-syntax-flow": "6.18.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "6.22.0",
+    "babel-plugin-transform-export-extensions": "6.22.0",
+    "babel-plugin-transform-flow-strip-types": "6.22.0",
+    "eslint": "3.15.0",
+    "eslint-config-airbnb": "14.1.0",
+    "eslint-plugin-flowtype": "^2.30.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "4.0.0",
+    "eslint-plugin-react": "^6.9.0",
+    "flow-bin": "0.39.0",
+    "husky": "0.13.1"
+  },
+  "keywords": [
+    "CSS",
+    "CSSOM",
+    "matchMedia",
+    "media queries",
+    "MediaQueryList",
+    "MQ",
+    "polyfill",
+    "responsive",
+    "viewport"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bigslycat/mq-polyfill.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bigslycat/mq-polyfill/issues"
+  },
+  "homepage": "https://github.com/bigslycat/mq-polyfill#readme",
+  "author": {
+    "name": "Pavel Tereschenko",
+    "email": "me@pavlik.pro",
+    "url": "https://github.com/bigslycat"
+  },
+  "license": "MIT"
+}

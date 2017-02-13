@@ -1,0 +1,8 @@
+{
+  "plugins": [
+    "syntax-flow",
+    "transform-es2015-modules-commonjs",
+    "transform-export-extensions",
+    "transform-flow-strip-types"
+  ]
+}

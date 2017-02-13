@@ -1,0 +1,79 @@
+rules:
+
+  flowtype/boolean-style:
+    - error
+    - boolean
+
+  flowtype/define-flow-type: error
+
+  flowtype/delimiter-dangle:
+    - error
+    - always-multiline
+
+  flowtype/generic-spacing:
+    - error
+    - never
+
+  flowtype/no-dupe-keys: error
+
+  flowtype/no-primitive-constructor-types: error
+
+  flowtype/no-weak-types:
+    - error
+    - any: true
+      Array: true
+      Object: true
+      Function: true
+
+  flowtype/object-type-delimiter:
+    - error
+    - comma
+
+  # flowtype/require-parameter-type:
+  #   - error
+  #   - excludeArrowFunctions: expressionsOnly
+
+  # flowtype/require-return-type:
+  #   - error
+  #   - always
+  #   - excludeArrowFunctions: expressionsOnly
+
+  flowtype/require-valid-file-annotation:
+    - error
+    - never
+    - annotationStyle: line
+
+  # flowtype/require-variable-type: error
+
+  flowtype/semi:
+    - error
+    - always
+
+  # flowtype/sort-keys:
+  #   - error
+  #   - asc
+  #   - caseSensitive: false
+  #     natural: false
+
+  flowtype/space-after-type-colon:
+    - error
+    - always
+    - allowLineBreak: false
+
+  flowtype/space-before-generic-bracket:
+    - error
+    - never
+
+  flowtype/space-before-type-colon:
+    - error
+    - never
+
+  flowtype/type-id-match:
+    - error
+    - ^([A-Z][a-z0-9]*)+Type$
+
+  flowtype/union-intersection-spacing:
+    - error
+    - always
+
+  flowtype/use-flow-type: error

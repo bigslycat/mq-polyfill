@@ -1,0 +1,10 @@
+extends: ../.eslintrc.yml
+
+rules:
+  class-methods-use-this:
+    - error
+    - exceptMethods:
+      - media
+      - matches
+      - addListener
+      - removeListener
