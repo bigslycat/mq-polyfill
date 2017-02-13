@@ -41,12 +41,14 @@
   "keywords": [
     "CSS",
     "CSSOM",
+    "jsdom",
     "matchMedia",
     "media queries",
     "MediaQueryList",
     "MQ",
     "polyfill",
     "responsive",
+    "tests",
     "viewport"
   ],
   "repository": {
