@@ -1,7 +1,7 @@
 # mq-polyfill
 
 [CSSOM](https://drafts.csswg.org/cssom-view/#dom-window-matchmedia)-valid and
-[jsdom](https://github.com/tmpvar/jsdom)-compatible
+[jsdom](https://github.com/tmpvar/jsdom)/[Jest](https://facebook.github.io/jest/)-compatible
 [matchMedia](https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia) polyfill
 for server-side unit tests.
 
