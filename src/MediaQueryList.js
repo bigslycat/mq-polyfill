@@ -21,13 +21,13 @@ export default class MediaQueryList {
 
   addListener() {
     throw new TypeError(
-      "'addListener' called on an object that does not implement interface MediaQueryList",
+      "'addListener' called on an object that does not implement interface MediaQueryList.",
     );
   }
 
   removeListener() {
     throw new TypeError(
-      "'removeListener' called on an object that does not implement interface MediaQueryList",
+      "'removeListener' called on an object that does not implement interface MediaQueryList.",
     );
   }
 
