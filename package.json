@@ -15,7 +15,8 @@
   "scripts": {
     "lint": "eslint src",
     "types": "flow",
-    "prebuild": "npm run lint && npm run types",
+    "test": "jest",
+    "prebuild": "npm run lint && npm run types && npm run test",
     "build": "npm run build-unsafe",
     "build-unsafe": "rm -rf lib && babel src --out-dir lib --source-maps",
     "postbuild": "cp src/matchMediaPolyfill.js.flow lib",
@@ -37,7 +38,8 @@
     "eslint-plugin-jsx-a11y": "4.0.0",
     "eslint-plugin-react": "^6.9.0",
     "flow-bin": "0.39.0",
-    "husky": "0.13.1"
+    "husky": "0.13.1",
+    "jest": "18.1.0"
   },
   "keywords": [
     "CSS",
