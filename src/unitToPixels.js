@@ -1,8 +1,8 @@
 // @flow
 
-type GetMultiplerType = (unit: string) => number;
+type UnitToPixelsType = (unit: string) => number;
 
-const getMultipler: GetMultiplerType = (unit) => {
+const unitToPixels: UnitToPixelsType = (unit) => {
   switch (unit) {
     case 'cm':
       return 0.3937 * 96;
@@ -23,4 +23,4 @@ const getMultipler: GetMultiplerType = (unit) => {
   }
 };
 
-export default getMultipler;
+export default unitToPixels;

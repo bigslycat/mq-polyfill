@@ -5,14 +5,12 @@ import MediaQueryList from './MediaQueryList';
 export type MatchMediaType = (media: string) => MediaQueryList;
 
 export type ContextType = {
+
   innerWidth: number,
   innerHeight: number,
-  orientation: string,
-  screen: {
-    width: number,
-    height: number,
-    orientation: string,
-  },
+
+  screen: Screen,
+
   addEventListener: (eventName: string, cb: () => void) => void,
   MediaQueryList: typeof MediaQueryList,
   matchMedia: MatchMediaType,
