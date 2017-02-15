@@ -18,6 +18,7 @@ const unitToPixels: UnitToPixelsType = (unit) => {
       return (12 * 96) / 72;
     case 'pt':
       return 96 / 72;
+    case 'px':
     default:
       return 1;
   }
