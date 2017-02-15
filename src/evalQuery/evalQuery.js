@@ -5,7 +5,7 @@ import compileQuery from './compileQuery';
 import type {
   ContextType,
   EvalQueryType,
-} from './types';
+} from '../types';
 
 type CreateEvalQueryType = (context: ContextType) => EvalQueryType;
 
@@ -14,14 +14,15 @@ const evalQuery: CreateEvalQueryType = ({
   innerHeight: height,
   screen: { orientation },
 }) =>
-  rawQuery =>
+  rawQuery => !!(
     // eslint-disable-next-line no-new-func
-    !!new Function('media', compileQuery(rawQuery))({
+    new Function('media', compileQuery(rawQuery))({
       width,
       height,
       orientation: orientation ?
         orientation.type.replace(/^(landscape|portrait).*$/, '$1') :
         'landscape',
-    });
+    })
+  );
 
 export default evalQuery;

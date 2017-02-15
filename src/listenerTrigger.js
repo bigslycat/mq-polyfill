@@ -10,7 +10,7 @@ import type {
 type TriggerType = (currentlisteners: ListenerType[], mqList: MediaQueryList) => void;
 type CreateListenerTriggerType = (evalQuery: EvalQueryType) => TriggerType;
 
-const createListenerTrigger: CreateListenerTriggerType = evalQuery =>
+const listenerTrigger: CreateListenerTriggerType = evalQuery =>
   (currentlisteners, mqList) => {
     const matches = evalQuery(mqList.media);
 
@@ -23,4 +23,4 @@ const createListenerTrigger: CreateListenerTriggerType = evalQuery =>
     currentlisteners.forEach(listener => listener(mqList));
   };
 
-export default createListenerTrigger;
+export default listenerTrigger;

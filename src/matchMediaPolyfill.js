@@ -2,12 +2,11 @@
 
 /* eslint no-param-reassign: off */
 
+import MediaQueryList, { addListener, removeListener } from './MediaQueryList';
+
 import createEvalQuery from './evalQuery';
-import MediaQueryList from './MediaQueryList';
-import createAddListener from './addListener';
-import createRemoveListener from './removeListener';
-import createMatchMedia from './matchMedia';
-import createListenerTrigger from './createListenerTrigger';
+import matchMedia from './matchMedia';
+import createTrigger from './listenerTrigger';
 
 import type { ContextType, ListenersType } from './types';
 
@@ -15,12 +14,17 @@ const matchMediaPolyfill = (context: ContextType) => {
   const listeners: ListenersType = new Map();
 
   const evalQuery = createEvalQuery(context);
-  const trigger = createListenerTrigger(evalQuery);
-  const addListener = createAddListener(listeners);
-  const removeListener = createRemoveListener(listeners);
-  const matchMedia = createMatchMedia({ evalQuery, addListener, removeListener });
 
-  Object.assign(context, { MediaQueryList, matchMedia });
+  Object.assign(context, {
+    MediaQueryList,
+    matchMedia: matchMedia({
+      addListener: addListener(listeners),
+      removeListener: removeListener(listeners),
+      evalQuery,
+    }),
+  });
+
+  const trigger = createTrigger(evalQuery);
 
   context.addEventListener('resize', () => listeners.forEach(trigger));
 };

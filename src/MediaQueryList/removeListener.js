@@ -3,7 +3,7 @@
 import type {
   ListenersType,
   AddRemoveListenerType,
-} from './types';
+} from '../types';
 
 type CreateRemoveListenerType = (listeners: ListenersType) => AddRemoveListenerType;
 

@@ -1,6 +1,6 @@
 // @flow
 
-import type { ListenerType } from './types';
+import type { ListenerType } from '../types';
 
 export default class MediaQueryList {
   constructor() {
