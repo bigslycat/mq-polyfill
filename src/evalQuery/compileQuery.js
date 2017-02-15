@@ -1,8 +1,9 @@
 // @flow
 
 import unitToPixels from './unitToPixels';
+import type { UnitType } from './unitToPixels';
 
-type UnitsReplaceType = ($0: string, $1: string, $2: string) => string;
+type UnitsReplaceType = ($0: string, $1: string, $2: UnitType) => string;
 type CompileQueryType = (rawQuery: string) => string;
 
 const unitsReplace: UnitsReplaceType = ($0, $1, $2) => String(+$1 * unitToPixels($2));

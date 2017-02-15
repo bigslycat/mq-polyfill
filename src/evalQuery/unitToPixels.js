@@ -1,6 +1,7 @@
 // @flow
 
-type UnitToPixelsType = (unit: string) => number;
+export type UnitType = 'cm' | 'em' | 'rem' | 'in' | 'dppx' | 'mm' | 'pc' | 'pt' | 'px';
+type UnitToPixelsType = (unit: UnitType) => number;
 
 const unitToPixels: UnitToPixelsType = (unit) => {
   switch (unit) {
