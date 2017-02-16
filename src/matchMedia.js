@@ -21,7 +21,7 @@ const matchMedia: CreateMatchMediaType = ({
 }) =>
   (media) => {
     const mqList = Object.create(MediaQueryList.prototype, {
-      media: { enumerable: true, configurable: true, value: media },
+      media: { enumerable: true, value: media },
       matches: { enumerable: true, configurable: true, value: evalQuery(media) },
       addListener: { value: addListener },
       removeListener: { value: removeListener },
