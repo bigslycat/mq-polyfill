@@ -1,6 +1,6 @@
 {
   "name": "mq-polyfill",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "CSSOM-valid and jsdom/Jest-compatible matchMedia polyfill for server-side unit tests",
   "engines": {
     "node": ">=7.*"
