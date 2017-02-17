@@ -5,7 +5,7 @@
   "engines": {
     "node": ">=7.*"
   },
-  "main": "lib/matchMediaPolyfill.js",
+  "main": "lib/index.js",
   "files": [
     "lib",
     "README.md",
