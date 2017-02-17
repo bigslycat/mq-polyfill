@@ -15,8 +15,8 @@ export type ContextType = {
   MediaQueryList?: typeof MediaQueryList,
   matchMedia?: MatchMediaType,
 
-  resizeTo: (width: number, height: number) => void,
-  resizeBy: (width: number, height: number) => void,
+  resizeTo?: (width: number, height: number) => void,
+  resizeBy?: (width: number, height: number) => void,
 };
 
 export type EvalQueryType = (rawQuery: string) => boolean;
