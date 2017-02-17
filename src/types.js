@@ -12,8 +12,11 @@ export type ContextType = {
   screen: Screen,
 
   addEventListener: (eventName: string, cb: () => void) => void,
-  MediaQueryList: typeof MediaQueryList,
-  matchMedia: MatchMediaType,
+  MediaQueryList?: typeof MediaQueryList,
+  matchMedia?: MatchMediaType,
+
+  resizeTo: (width: number, height: number) => void,
+  resizeBy: (width: number, height: number) => void,
 };
 
 export type EvalQueryType = (rawQuery: string) => boolean;
