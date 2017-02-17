@@ -5,6 +5,12 @@
 [matchMedia](https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia) polyfill
 for server-side unit tests.
 
+## Install
+
+```bash
+npm install --save-dev mq-polyfill
+```
+
 ## Usage
 
 ```javascript
