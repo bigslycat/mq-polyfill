@@ -13,9 +13,10 @@
   ],
   "scripts": {
     "lint": "eslint src",
-    "types": "flow",
+    "flow": "flow",
+    "flow:i": "flow-typed install",
     "test": "jest",
-    "prebuild": "npm run lint && npm run types && npm run test",
+    "prebuild": "npm run lint && npm run flow && npm run test",
     "build": "npm run build-unsafe",
     "prebuild-unsafe": "rimraf lib",
     "build-unsafe": "babel src --out-dir lib --ignore spec.js",
@@ -37,6 +38,7 @@
     "eslint-plugin-react": "^7.0.1",
     "flow-bin": "^0.46.0",
     "flow-copy-source": "^1.1.0",
+    "flow-typed": "^2.1.2",
     "husky": "^0.13.1",
     "jest": "^20.0.3",
     "rimraf": "^2.5.4"
