@@ -1,5 +1,7 @@
 # mq-polyfill
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/bigslycat/mq-polyfill.svg)](https://greenkeeper.io/)
+
 [CSSOM](https://drafts.csswg.org/cssom-view/#dom-window-matchmedia)-valid and
 [jsdom](https://github.com/tmpvar/jsdom)/[Jest](https://facebook.github.io/jest/)-compatible
 [matchMedia](https://developer.mozilla.org/en-US/docs/Web/API/Window/matchMedia) polyfill
