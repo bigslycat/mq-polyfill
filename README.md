@@ -14,10 +14,10 @@ npm install --save-dev mq-polyfill
 ## Usage
 
 ```javascript
-import { jsdom } from 'jsdom';
+import { JSDOM } from 'jsdom';
 import matchMediaPolyfill from 'mq-polyfill';
 
-const window = jsdom().defaultView;
+const { window } = JSDOM();
 
 /**
  * Define the window.matchMedia
