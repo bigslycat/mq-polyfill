@@ -16,6 +16,7 @@ npm install --save-dev mq-polyfill
 ```javascript
 import { jsdom } from 'jsdom';
 import matchMediaPolyfill from 'mq-polyfill';
+import { resizeTo } from 'window-resizeto';
 
 const window = jsdom().defaultView;
 
@@ -32,14 +33,9 @@ window
  * For dispatching resize event
  * we must implement window.resizeTo in jsdom
  */
-window.resizeTo = function resizeTo(width, height) {
-  Object.assign(this, {
-    innerWidth: width,
-    innerHeight: height,
-    outerWidth: width,
-    outerHeight: height,
-  }).dispatchEvent(new this.Event('resize'));
-};
+window.resizeTo = function (width, height) {
+  resizeTo(this, width, height);
+}
 
 window.resizeTo(800, 600);
 // console.log() output:
