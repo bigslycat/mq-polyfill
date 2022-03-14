@@ -13,8 +13,8 @@ describe('matchMedia()', () =>
     const evalQuery = jest.fn()
       .mockReturnValueOnce(matches);
 
-    const addListener = () => {};
-    const removeListener = () => {};
+    const addListener = jest.fn();
+    const removeListener = jest.fn();
 
     const matchMedia = createMatchMedia({
       evalQuery,
@@ -57,5 +57,11 @@ describe('matchMedia()', () =>
         writable: false,
         value: removeListener,
       });
+
+    const listener = jest.fn();
+    mq.addEventListener('change', listener);
+    expect(addListener).toHaveBeenCalledWith(listener);
+    mq.removeEventListener('change', listener);
+    expect(removeListener).toHaveBeenCalledWith(listener);
   }),
 );
