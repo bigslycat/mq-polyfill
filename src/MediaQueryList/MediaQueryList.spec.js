@@ -35,4 +35,14 @@ describe('Interface MediaQueryList', () => {
     expect(wrongInstance.removeListener)
       .toThrow(getError('removeListener')),
   );
+
+  it('Require to implement "addEventListener" method', () =>
+    expect(wrongInstance.addEventListener)
+      .toThrow(getError('addEventListener')),
+  );
+
+  it('Require to implement "removeEventListener" method', () =>
+    expect(wrongInstance.removeEventListener)
+      .toThrow(getError('removeEventListener')),
+  );
 });

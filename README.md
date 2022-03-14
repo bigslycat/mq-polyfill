@@ -26,7 +26,7 @@ matchMediaPolyfill(window);
 
 window
   .matchMedia('(min-width: 920px)') // Create MediaQueryList instance
-  .addListener(console.log);        // Subscribe to MQ mode changes
+  .addEventListener('change', console.log); // Subscribe to MQ mode changes
 
 /**
  * For dispatching resize event

@@ -22,12 +22,12 @@ describe('matchMediaPolyfill', () => {
 
     const matchMediaResult = 'MATCH_MEDIA';
     const addListenerResult = 'ADD_LISTENER';
-    const removeListeneResult = 'REMOVE_LISTENER';
+    const removeListenerResult = 'REMOVE_LISTENER';
     const createEvalQueryResult = 'EVAL_QUERY';
 
     matchMedia.mockReturnValueOnce(matchMediaResult);
     addListener.mockReturnValueOnce(addListenerResult);
-    removeListener.mockReturnValueOnce(removeListeneResult);
+    removeListener.mockReturnValueOnce(removeListenerResult);
     createEvalQuery.mockReturnValueOnce(createEvalQueryResult);
     createTrigger.mockReturnValueOnce(trigger);
 
@@ -36,7 +36,7 @@ describe('matchMediaPolyfill', () => {
     expect(matchMedia).toHaveBeenCalledTimes(1);
     expect(matchMedia.mock.calls[0][0]).toEqual({
       addListener: addListenerResult,
-      removeListener: removeListeneResult,
+      removeListener: removeListenerResult,
       evalQuery: createEvalQueryResult,
     });
 

@@ -25,6 +25,8 @@ const matchMedia: CreateMatchMediaType = ({
       matches: { enumerable: true, configurable: true, value: evalQuery(media) },
       addListener: { value: addListener },
       removeListener: { value: removeListener },
+      addEventListener: { value: (type, listener) => addListener(listener) },
+      removeEventListener: { value: (type, listener) => removeListener(listener) },
     });
 
     return mqList;

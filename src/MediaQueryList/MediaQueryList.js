@@ -31,8 +31,22 @@ export default class MediaQueryList {
     );
   }
 
+  addEventListener() {
+    throw new TypeError(
+      "'addEventListener' called on an object that does not implement interface MediaQueryList.",
+    );
+  }
+
+  removeEventListener() {
+    throw new TypeError(
+      "'removeEventListener' called on an object that does not implement interface MediaQueryList.",
+    );
+  }
+
   media: string;
   matches: boolean;
   addListener: (listener: ListenerType) => void;
   removeListener: (listener: ListenerType) => void;
+  addEventListener: (type: 'change', listener: ListenerType) => void;
+  removeEventListener: (type: 'change', listener: ListenerType) => void;
 }
